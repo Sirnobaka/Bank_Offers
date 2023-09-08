@@ -45,7 +45,7 @@ st.title('Предложение новой услуги клиентам бан
 st.header('Классификация клиентов на основе вероятности принять предложение')
 
 st.markdown("Табличка с данными о клиентах")
-st.table(df_client.head())
+st.table(df_client)
 
 st.markdown("Изучить распределение предикторов")
 
@@ -74,7 +74,7 @@ with st.spinner('загрузка гистграммы...'):
 	st.pyplot(fig)
 
 
-st.markdown("Изучить корреляцию между признаками (а также целевой переменной TARGET)")
+st.markdown("Изучить корреляцию между признаками (а также целевой переменной TARGET), выберите 2 и более признака")
 
 #choice = ['TARGET']
 choice = st.multiselect("Выберите признаки", list(df_client.columns.drop(cols_to_not_show)))
